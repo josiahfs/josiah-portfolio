@@ -126,7 +126,6 @@ const Gallery = () => {
             className="w-1/2 bg-transparent flex flex-col justify-center items-center h-screen"
             ref={rightRef}
           >
-            {/* <div className=" w-[40vw] h-[40vw] relative"> */}
             <div className="mr-[40px] w-10/12 h-1/2 relative">
               {photoRefs.current.map((photoRef, index) => (
                 <div
@@ -147,8 +146,6 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-
-        <div className="w-full h-[50vh]"></div>
       </div>
     </>
   );

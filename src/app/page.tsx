@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "./components/HeroSection";
 import About from "./components/AboutSection";
 import Gallery from "./components/ProjectSection";
+import Contact from "./components/ContactSection";
 
 export const metadata = {
   title: "Josiah's Portfolio",
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <About />
       <Gallery />
+      <Contact />
     </main>
   );
 }
