@@ -39,7 +39,7 @@ const HeroSection = () => {
     }
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
-    xPercent += 0.1 * direction;
+    xPercent += 0.03 * direction;
     requestAnimationFrame(animation);
   };
 
@@ -54,7 +54,7 @@ const HeroSection = () => {
       </div> */}
       <div
         id="marquee-text"
-        className="w-max text-[#ECECEC] text-[360px] font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-scroll"
+        className="w-max text-[#ECECEC] text-[360px] font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden"
       >
         <div ref={slider} className="relative whitespace-nowrap flex">
           <p ref={firstText}>Josiah Farrel &#183;&nbsp;</p>
