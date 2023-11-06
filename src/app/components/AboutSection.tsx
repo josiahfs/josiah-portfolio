@@ -34,7 +34,7 @@ const AboutSection = () => {
               </span>
             </p>
           </div>
-          <p className="text-[#B1B0B0] text-[24] font-regular">
+          <p className="text-[#B1B0B0] text-[16px] font-regular">
             Hi there! My name is [Your Name] and I am a [Your Profession]. I
             have [Number of Years] years of experience in [Your Field] and have
             worked on projects such as [Project 1], [Project 2], and [Project

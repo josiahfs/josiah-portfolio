@@ -1,7 +1,7 @@
 import Head from "next/head";
-import AboutSection from "./components/AboutSection";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
+import Hero from "./components/HeroSection";
+import About from "./components/AboutSection";
+import Gallery from "./components/ProjectSection";
 
 export const metadata = {
   title: "Josiah's Portfolio",
@@ -11,12 +11,9 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#0B0B0B] overflow-scroll no-scrollbar">
-      {/* <Head>
-        <title>Josiah&apos;s Portfolio</title>
-      </Head> */}
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
+      <Hero />
+      <About />
+      <Gallery />
     </main>
   );
 }
