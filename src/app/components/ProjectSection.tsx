@@ -8,55 +8,49 @@ import Button from "./Button";
 gsap.registerPlugin(ScrollTrigger);
 
 const Gallery = () => {
-  const leftRef = useRef(null);
+  const galleryRef = useRef(null);
   const rightRef = useRef(null);
   const photoRefs = useRef([useRef(null), useRef(null), useRef(null)]);
   const imageSources = ["/project1.svg", "/project2.svg", "/project3.svg"]; // Add your image sources here
-  const [leftIndex, setLeftIndex] = useState(0);
 
   useEffect(() => {
-    // Define a GSAP animation for pinning the rightRef
-    const pinRight = gsap.to(leftRef.current, {
+    const photos = photoRefs.current.map((ref) => ref.current);
+    // Set the initial yPercent value for the first photo to 0%
+    gsap.set(photos[0], { yPercent: 0 });
+    // Set the initial yPercent value for the rest of the photos to 101%
+    gsap.set(photos.slice(1), { yPercent: 100 });
+
+    // Create an animation to move the photos from 101% yPercent to 0% yPercent
+    const photoAnimation = gsap.to(photos, {
+      yPercent: 0,
+      duration: 1,
+      stagger: 1,
       scrollTrigger: {
-        trigger: rightRef.current,
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        pinSpacing: false,
+        trigger: galleryRef.current,
+        start: "top center",
+        end: "bottom bottom",
         scrub: 1,
         markers: true, // Remove this line in production
       },
     });
 
-    // Define a GSAP animation for the leftRef
-    const leftAnimation = gsap.to(leftRef.current, {
+    // Define a GSAP animation for pinning the rightRef
+    const pinRight = gsap.to(rightRef.current, {
       scrollTrigger: {
-        trigger: leftRef.current,
+        trigger: galleryRef.current,
         start: "top top",
-        end: "bottom top",
+        end: "bottom bottom",
+        pin: rightRef.current,
         scrub: 1,
-        markers: true, // Remove this line in production
-        onUpdate: (self) => {
-          const scrollY = self.scroll();
-          const windowHeight = window.innerHeight;
-          const totalHeight = leftRef.current.clientHeight;
-          const scrollPercent = (scrollY / (totalHeight - windowHeight)) * 100;
-          // Calculate the index based on the scroll percentage
-          const newIndex = Math.min(Math.floor((scrollPercent / 100) * 3), 2);
-          setLeftIndex(newIndex); // Update the leftIndex state
-        },
-      },
-      y: () => {
-        // Calculate the distance to move the leftRef (change this as needed)
-        return -(leftRef.current.clientHeight - window.innerHeight);
-        console.log(newIndex);
+        markers: false, // Remove this line in production
+        animation: photoAnimation, // Attach the photo animation to the ScrollTrigger
       },
     });
 
     // Make sure to kill the animations when the component unmounts
     return () => {
       pinRight.kill();
-      leftAnimation.kill();
+      photoAnimation.kill();
     };
   }, []);
 
@@ -66,8 +60,8 @@ const Gallery = () => {
         <div className="w-full h-[20vh] flex justify-center items-end">
           <p className="text-[52px] font-bold ">My Projects</p>
         </div>
-        <div className="flex">
-          <div className="w-1/2" ref={leftRef}>
+        <div className="flex" ref={galleryRef}>
+          <div className="w-1/2">
             {/* items 1 */}
             <div className="mx-auto w-6/12">
               <div className="h-screen flex flex-col justify-center">
@@ -126,13 +120,12 @@ const Gallery = () => {
             className="w-1/2 bg-transparent flex flex-col justify-center items-center h-screen"
             ref={rightRef}
           >
-            <div className="mr-[40px] w-10/12 h-1/2 relative">
+            <div className="mr-[40px] w-10/12 h-1/2 rounded-[12px] relative overflow-hidden">
               {photoRefs.current.map((photoRef, index) => (
                 <div
                   key={index}
                   className="absolute w-full h-full"
                   ref={photoRef}
-                  style={{ opacity: index === 0 ? 1 : 0 }}
                 >
                   <Image
                     className="rounded-[12px]"

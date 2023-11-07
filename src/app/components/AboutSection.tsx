@@ -6,7 +6,8 @@ import Button from "./Button";
 
 const AboutSection = () => {
   return (
-    <section className="h-screen my-auto flex justify-center items-center">
+    <section className="h-screen my-auto flex flex-col justify-center items-center">
+      <div className="w-full h-[20vh] flex justify-center items-end"></div>
       <div className="h-screen w-10/12 flex justify-evenly items-center">
         <div className="w-[618px] space-y-[24px]">
           <div>
