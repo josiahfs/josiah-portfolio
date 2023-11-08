@@ -60,8 +60,8 @@ const Gallery = () => {
         <div className="w-full h-[20vh] flex justify-center items-end">
           <p className="text-[52px] font-bold ">My Projects</p>
         </div>
-        <div className="flex" ref={galleryRef}>
-          <div className="w-1/2">
+        <div className="hidden lg:flex" ref={galleryRef}>
+          <div className="w-[50vw]">
             {/* items 1 */}
             <div className="mx-auto w-1/2">
               <div className="h-screen flex flex-col justify-center">
@@ -117,10 +117,10 @@ const Gallery = () => {
           </div>
 
           <div
-            className="w-1/2 bg-transparent flex flex-col justify-center items-start h-screen"
+            className="bg-transparent flex flex-col justify-center items-center h-screen"
             ref={rightRef}
           >
-            <div className="mr-[40px] w-10/12 h-1/2 rounded-[12px] relative overflow-hidden">
+            <div className="w-[41vw] h-[50vh] rounded-[12px] relative overflow-hidden">
               {photoRefs.current.map((photoRef, index) => (
                 <div
                   key={index}
@@ -136,6 +136,90 @@ const Gallery = () => {
                   />
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* layout for mobile  */}
+        <div className="block lg:hidden mx-6 flex-col justify-between items-center my-14 space-y-[100px]">
+          {/* items 1 */}
+          <div>
+            <div className="w-full mb-6">
+              <Image
+                src="/project1.svg"
+                alt="Picture of the author"
+                width={100}
+                height={100}
+                className="relative w-full object-contain h-auto rounded-md"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="mb-[20px]">
+                <p className="text-[14px]">Mobile App</p>
+                <p className="text-[24px] my-2 font-semibold text-[#C19C63] leading-none">
+                  Calico
+                </p>
+                <p className="text-[16px] text-[#B1B0B0] text-justify">
+                  Calico is a mobile app that has a chatbot that assists users
+                  in managing their mental well-being through personalized
+                  responses and guidance. With Calico, users can share their
+                  concerns and problems for appropriate support.
+                </p>
+              </div>
+              <Button text="View More" />
+            </div>
+          </div>
+          {/* items 2 */}
+          <div>
+            <div className="w-full mb-6">
+              <Image
+                src="/project2.svg"
+                alt="Picture of project 3"
+                width={100}
+                height={100}
+                className="relative w-full object-contain h-auto rounded-md"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="mb-[20px]">
+                <p className="text-[14px]">Mobile App</p>
+                <p className="text-[24px] my-2 font-semibold text-[#C19C63] leading-none">
+                  Dental Hero
+                </p>
+                <p className="text-[16px] text-[#B1B0B0] text-justify">
+                  Dental Hero is lorem ipsum dkfalf dfjadkjf fdskalf jadslfj
+                  fdaklfj aldjfafadf fajdl fjadfj fdaslkfj af fjalsdf jaldfj
+                  aldjf lajflaj faf alal fjlasfjlasjf lakskf
+                  adfdajhfadhfiouaefha dafhadhf uad.
+                </p>
+              </div>
+              <Button text="View More" />
+            </div>
+          </div>
+          {/* items 3 */}
+          <div>
+            <div className="w-full mb-6">
+              <Image
+                src="/project3.svg"
+                alt="Picture of project 3"
+                width={100}
+                height={100}
+                className="relative w-full object-contain h-auto rounded-md"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="mb-[20px]">
+                <p className="text-[14px]">UI/UX, Front End</p>
+                <p className="text-[24px] my-2 font-semibold text-[#C19C63] leading-none">
+                  Pemira Himakom
+                </p>
+                <p className="text-[16px] text-[#B1B0B0] text-justify">
+                  Pemira Himakom is a website for an event that facilitates
+                  yearly Himakom leader election that allows Himakom UGM members
+                  to vote online and onsite.
+                </p>
+              </div>
+              <Button text="View More" />
             </div>
           </div>
         </div>

@@ -8,13 +8,13 @@ const AboutSection = () => {
   return (
     <section className="h-screen my-auto flex flex-col justify-center items-center">
       <div className="w-full h-[20vh] flex justify-center items-end"></div>
-      <div className="h-screen w-10/12 flex justify-evenly items-center">
-        <div className="w-[618px] space-y-[24px]">
+      <div className="h-screen w-10/12 flex flex-col lg:flex-row justify-evenly items-center">
+        <div className="w-full lg:w-[618px] space-y-4 lg:order-1">
           <div>
-            <p className="text-[#ECECEC] font-bold text-[40px]">
+            <p className="text-[#ECECEC] font-bold text-[24px] lg:text-[40px]">
               Hi! My name is Josiah<br></br>
               I&rsquo;m&nbsp;
-              <span className="text-[#C19C63] text-[40px]">
+              <span className="text-[#C19C63] text-[24px] lg:text-[40px]">
                 <TypeAnimation
                   sequence={[
                     "a Compsci Student.",
@@ -35,23 +35,24 @@ const AboutSection = () => {
               </span>
             </p>
           </div>
-          <p className="text-[#B1B0B0] text-[16px] font-regular">
+          <p className="text-[#B1B0B0] text-[14px] mb-2 lg:text-[16px] text-justify font-regular">
             Hi there! My name is [Your Name] and I am a [Your Profession]. I
             have [Number of Years] years of experience in [Your Field] and have
             worked on projects such as [Project 1], [Project 2], and [Project
-            3].Hi there! My name is [Your Name] and I am a [Your Profession]. I
+            3]. Hi there! My name is [Your Name] and I am a [Your Profession]. I
             have [Number of Years] years of experience in [Your Field] and have
             worked on projects such as [Project 1], [Project 2], and [Project
             3].
           </p>
           <Button text="Download CV" />
         </div>
-        <div>
+        <div className="w-[30vh] lg:w-[480px] lg:order-2">
           <Image
             src="/about-pic.svg"
             alt="Picture of the author"
             width={480}
             height={480}
+            className="relative w-full object-contain h-auto"
           />
         </div>
       </div>
