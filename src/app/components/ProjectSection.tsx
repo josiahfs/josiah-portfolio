@@ -52,7 +52,7 @@ const Gallery = () => {
       pinRight.kill();
       photoAnimation.kill();
     };
-  }, []);
+  }, [galleryRef.current]);
 
   return (
     <>
