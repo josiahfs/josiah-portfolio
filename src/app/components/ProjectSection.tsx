@@ -7,7 +7,7 @@ import Button from "./Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Gallery = () => {
+const Gallery: React.FC = () => {
   const galleryRef = useRef(null);
   const rightRef = useRef(null);
   const photoRefs = useRef([useRef(null), useRef(null), useRef(null)]);

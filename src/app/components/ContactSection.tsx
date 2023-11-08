@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Button from "./Button";
 import Image from "next/image";
 
-const ContactSection = () => {
+const ContactSection: React.FC = () => {
   return (
     <section className="h-screen w-screen bg-pattern-bg flex justify-center items-center">
       <div className=" w-full mx-[24px] px-[24px] py-[40px] lg:w-2/5 bg-[#0B0B0B] rounded-[24px] flex flex-col justify-center items-center lg:px-[60px] lg:py-[80px]">

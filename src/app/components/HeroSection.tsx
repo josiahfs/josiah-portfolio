@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { dir } from "console";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
