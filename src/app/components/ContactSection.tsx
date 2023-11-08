@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Button from "./Button";
-import Image from "next/Image";
+import Image from "next/image";
 
 const ContactSection = () => {
   return (
