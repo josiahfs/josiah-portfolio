@@ -13,7 +13,7 @@ const ContactSection = () => {
         <p className="text-[#B1B0B0] text-lg mb-4 lg:text-3xl text-center font-light lg:mb-[20px]">
           If you want to collaborate, please reach me out!
         </p>
-        <Button text="Contact Me" />
+        <Button text="Contact Me" onClick={} />
       </div>
     </section>
   );
