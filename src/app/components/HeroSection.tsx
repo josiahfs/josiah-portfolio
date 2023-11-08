@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Button from "./Button";
 import Image from "next/Image";
+import Navbar from "./Navbar";
 import gsap from "gsap";
 import { dir } from "console";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -54,7 +55,7 @@ const HeroSection = () => {
       </div> */}
       <div
         id="marquee-text"
-        className="w-max text-[#ECECEC] text-[360px] font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+        className="w-max text-[#ECECEC] text-[360px] font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden select-none"
       >
         <div ref={slider} className="relative whitespace-nowrap flex">
           <p ref={firstText}>Josiah Farrel &#183;&nbsp;</p>
@@ -64,7 +65,7 @@ const HeroSection = () => {
         </div>
       </div>
       <Image
-        className="z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2"
+        className="z-1 absolute bottom-0 left-1/2 transform -translate-x-1/2 select-none"
         src="/hero.svg"
         alt="Picture of the author"
         width={480}
