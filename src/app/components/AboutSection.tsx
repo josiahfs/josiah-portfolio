@@ -70,11 +70,12 @@ import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
 import Button from "./Button";
 
-type AboutSectionProps = {
-  onClick: () => void; // Define the type for the onClick prop
-};
+// type AboutSectionProps = {
+//   onClick: () => void; // Define the type for the onClick prop
+// };
 
-const AboutSection: React.FC<AboutSectionProps> = ({ onClick }) => {
+// const AboutSection: React.FC<AboutSectionProps> = ({ onClick }) => {
+const AboutSection = () => {
   return (
     <section className="h-screen my-auto flex flex-col justify-center items-center">
       <div className="w-full h-[20vh] flex justify-center items-end"></div>
@@ -114,7 +115,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onClick }) => {
             worked on projects such as [Project 1], [Project 2], and [Project
             3].
           </p>
-          <Button text="Download CV" onClick={onClick} />
+          <Button text="Download CV" onClick={() => {}} />
         </div>
         <div className="w-[30vh] lg:w-[480px] lg:order-2">
           <Image

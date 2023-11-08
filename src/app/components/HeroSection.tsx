@@ -45,33 +45,35 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="h-screen w-screen bg-pattern-bg relative overflow-hidden">
-      {/* <div className="text-[#ECECEC] mx-[120px] z-0 mt-12">
+    <>
+      <section className="h-screen w-screen bg-pattern-bg relative overflow-hidden">
+        {/* <div className="text-[#ECECEC] mx-[120px] z-0 mt-12">
         <div className="text-4xl text-[#B1B0B0]">
           <p>Student</p>
           <p>Mobile Developer</p>
           <p>Project Manager</p>
         </div>
       </div> */}
-      <div
-        id="marquee-text"
-        className="w-max text-[#ECECEC] text-[360px] font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden select-none"
-      >
-        <div ref={slider} className="relative whitespace-nowrap flex">
-          <p ref={firstText}>Josiah Farrel &#183;&nbsp;</p>
-          <p ref={secondText} className="absolute left-full">
-            Josiah Farrel &#183;&nbsp;
-          </p>
+        <div
+          id="marquee-text"
+          className="w-max text-[#ECECEC] text-[360px] font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden select-none"
+        >
+          <div ref={slider} className="relative whitespace-nowrap flex">
+            <p ref={firstText}>Josiah Farrel &#183;&nbsp;</p>
+            <p ref={secondText} className="absolute left-full">
+              Josiah Farrel &#183;&nbsp;
+            </p>
+          </div>
         </div>
-      </div>
-      <Image
-        className="z-1 absolute bottom-0 left-1/2 transform -translate-x-1/2 select-none"
-        src="/hero.svg"
-        alt="Picture of the author"
-        width={480}
-        height={480}
-      />
-    </section>
+        <Image
+          className="z-1 absolute bottom-0 left-1/2 transform -translate-x-1/2 select-none"
+          src="/hero.svg"
+          alt="Picture of the author"
+          width={480}
+          height={480}
+        />
+      </section>
+    </>
   );
 };
 

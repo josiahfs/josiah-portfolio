@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
           </svg>
         </button>
       </div>
-      {menuOpen && <NavMenu className="z-0" />}
+      {menuOpen && <NavMenu />}
     </header>
   );
 };

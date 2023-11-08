@@ -43,7 +43,11 @@ const Gallery: React.FC = () => {
         pin: rightRef.current,
         scrub: 1,
         markers: false, // Remove this line in production
-        animation: photoAnimation, // Attach the photo animation to the ScrollTrigger
+        // animation: photoAnimation, // Attach the photo animation to the ScrollTrigger
+        onUpdate: (self) => {
+          // Call the photo animation on each update of the ScrollTrigger
+          photoAnimation.progress(self.progress);
+        },
       },
     });
 
@@ -77,7 +81,7 @@ const Gallery: React.FC = () => {
                     concerns and problems for appropriate support.
                   </p>
                 </div>
-                <Button text="View More" />
+                <Button text="View More" onClick={() => {}} />
               </div>
             </div>
             {/* items 2 */}
@@ -95,7 +99,7 @@ const Gallery: React.FC = () => {
                     adfdajhfadhfiouaefha dafhadhf uad.
                   </p>
                 </div>
-                <Button text="View More" />
+                <Button text="View More" onClick={() => {}} />
               </div>
             </div>
             <div className="mx-auto w-1/2">
@@ -111,7 +115,7 @@ const Gallery: React.FC = () => {
                     members to vote online and onsite.
                   </p>
                 </div>
-                <Button text="View More" />
+                <Button text="View More" onClick={() => {}} />
               </div>
             </div>
           </div>
@@ -166,7 +170,7 @@ const Gallery: React.FC = () => {
                   concerns and problems for appropriate support.
                 </p>
               </div>
-              <Button text="View More" />
+              <Button text="View More" onClick={() => {}} />
             </div>
           </div>
           {/* items 2 */}
@@ -193,7 +197,7 @@ const Gallery: React.FC = () => {
                   adfdajhfadhfiouaefha dafhadhf uad.
                 </p>
               </div>
-              <Button text="View More" />
+              <Button text="View More" onClick={() => {}} />
             </div>
           </div>
           {/* items 3 */}
@@ -219,7 +223,7 @@ const Gallery: React.FC = () => {
                   to vote online and onsite.
                 </p>
               </div>
-              <Button text="View More" />
+              <Button text="View More" onClick={() => {}} />
             </div>
           </div>
         </div>
