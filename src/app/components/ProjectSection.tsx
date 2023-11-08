@@ -77,7 +77,7 @@ const Gallery = () => {
                     concerns and problems for appropriate support.
                   </p>
                 </div>
-                <Button text="View More" />
+                <Button text="View More" onClick={} />
               </div>
             </div>
             {/* items 2 */}
@@ -95,7 +95,7 @@ const Gallery = () => {
                     adfdajhfadhfiouaefha dafhadhf uad.
                   </p>
                 </div>
-                <Button text="View More" />
+                <Button text="View More" onClick={} />
               </div>
             </div>
             <div className="mx-auto w-1/2">
@@ -111,7 +111,7 @@ const Gallery = () => {
                     members to vote online and onsite.
                   </p>
                 </div>
-                <Button text="View More" />
+                <Button text="View More" onClick={} />
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ const Gallery = () => {
                   concerns and problems for appropriate support.
                 </p>
               </div>
-              <Button text="View More" />
+              <Button text="View More" onClick={} />
             </div>
           </div>
           {/* items 2 */}
@@ -193,7 +193,7 @@ const Gallery = () => {
                   adfdajhfadhfiouaefha dafhadhf uad.
                 </p>
               </div>
-              <Button text="View More" />
+              <Button text="View More" onClick={} />
             </div>
           </div>
           {/* items 3 */}
@@ -219,7 +219,7 @@ const Gallery = () => {
                   to vote online and onsite.
                 </p>
               </div>
-              <Button text="View More" />
+              <Button text="View More" onClick={} />
             </div>
           </div>
         </div>

@@ -35,7 +35,7 @@ const AboutSection = () => {
               </span>
             </p>
           </div>
-          <p className="text-[#B1B0B0] text-[14px] mb-2 lg:text-[16px] text-justify font-regular">
+          <p className="text-[#B1B0B0] text-[14px] lg:text-[16px] text-justify font-regular">
             Hi there! My name is [Your Name] and I am a [Your Profession]. I
             have [Number of Years] years of experience in [Your Field] and have
             worked on projects such as [Project 1], [Project 2], and [Project
@@ -44,7 +44,7 @@ const AboutSection = () => {
             worked on projects such as [Project 1], [Project 2], and [Project
             3].
           </p>
-          <Button text="Download CV" />
+          <Button text="Download CV" onClick={} />
         </div>
         <div className="w-[30vh] lg:w-[480px] lg:order-2">
           <Image
