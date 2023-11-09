@@ -24,7 +24,7 @@ const Gallery: React.FC = () => {
     const photoAnimation = gsap.to(photos, {
       yPercent: 0,
       duration: 1,
-      stagger: 1,
+      stagger: 1.5,
       scrollTrigger: {
         trigger: galleryRef.current,
         start: "top center",

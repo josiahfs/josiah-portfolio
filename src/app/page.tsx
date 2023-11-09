@@ -4,6 +4,7 @@ import About from "./components/AboutSection";
 import Gallery from "./components/ProjectSection";
 import Contact from "./components/ContactSection";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Josiah's Portfolio",
@@ -20,6 +21,7 @@ export default function Home() {
       <About />
       <Gallery />
       <Contact />
+      <Footer />
     </main>
   );
 }
