@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               alt={"Footer Image"}
             />
             <div className="h-[30px] lg:hidden"></div>
-            <div className="flex w-1/2 lg:w-2/6 justify-evenly">
+            <div className="flex w-1/2  justify-evenly">
               <a href="https://www.linkedin.com/in/josiahfs">
                 <FaLinkedin
                   size={24}
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                       className="text-sm text-[#B1B0B0]  hover:text-[#C19C63] transition-all duration-300 font-medium inline-block leading-tight  no-underline relative"
                     >
                       <span data-clip="Home" className="block relative ">
-                        Calico
+                        Flutter
                       </span>
                     </a>
                   </li>
@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
                       className="text-sm  hover:text-[#C19C63] transition-all duration-300 font-medium inline-block leading-tight text-[#B1B0B0] no-underline relative"
                     >
                       <span data-clip="About" className="relative block">
-                        Dental Hero
+                        Project Management
                       </span>
                     </a>
                   </li>
@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
                       className="text-sm  hover:text-[#C19C63] transition-all duration-300 font-medium inline-block leading-tight text-[#B1B0B0] no-underline relative"
                     >
                       <span data-clip="Work" className="relative block">
-                        Pemira Himakom
+                        NextJS
                       </span>
                     </a>
                   </li>
@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
                       className="text-sm  hover:text-[#C19C63] transition-all duration-300 font-medium inline-block leading-tight  text-[#B1B0B0] no-underline relative"
                     >
                       <span data-clip="Contact" className="relative block">
-                        Himakom&apos;s Website
+                        Leadership
                       </span>
                     </a>
                   </li>
@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
                       className="text-sm  hover:text-[#C19C63] transition-all duration-300 font-medium inline-block leading-tight  text-[#B1B0B0] no-underline relative"
                     >
                       <span data-clip="Contact" className="relative block">
-                        Project 5
+                        Team Management
                       </span>
                     </a>
                   </li>

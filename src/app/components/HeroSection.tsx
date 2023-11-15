@@ -65,13 +65,14 @@ const HeroSection: React.FC = () => {
             </p>
           </div>
         </div>
-        <Image
-          className="z-1 absolute bottom-0 left-1/2 transform -translate-x-1/2 select-none"
-          src="/hero.svg"
-          alt="Picture of the author"
-          width={480}
-          height={480}
-        />
+        <div className="w-[480px] h-[480px] z-1 absolute bottom-0 left-1/2 transform -translate-x-1/2 select-none">
+          <Image
+            src="/hero.svg"
+            alt="Picture of the author"
+            width={1500}
+            height={1500}
+          />
+        </div>
       </section>
     </>
   );

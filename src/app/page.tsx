@@ -14,6 +14,10 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#0B0B0B] overflow-hidden">
+      <div className="z-1 absolute top-0 left-1/2 transform -translate-x-1/2 bg-red-600 px-4 py-2 text-white">
+        This web is on progress, for more information contact me through email
+        or linkedin
+      </div>
       <header className="z-10 fixed right-0">
         <Navbar />
       </header>

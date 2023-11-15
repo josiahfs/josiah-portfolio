@@ -93,10 +93,10 @@ const Gallery: React.FC = () => {
                     Dental Hero
                   </p>
                   <p className="text-[16px] text-[#B1B0B0]">
-                    Dental Hero is lorem ipsum dkfalf dfjadkjf fdskalf jadslfj
-                    fdaklfj aldjfafadf fajdl fjadfj fdaslkfj af fjalsdf jaldfj
-                    aldjf lajflaj faf alal fjlasfjlasjf lakskf
-                    adfdajhfadhfiouaefha dafhadhf uad.
+                    Dental Hero is A Mobile App to accomodate 30-days oral
+                    hygiene campaign. With the features of AR instructions and
+                    gamification, users can learn how to brush their teeth
+                    properly and have fun at the same time.
                   </p>
                 </div>
                 <Button text="View More" onClick={() => {}} />
@@ -152,8 +152,8 @@ const Gallery: React.FC = () => {
               <Image
                 src="/project1.svg"
                 alt="Picture of the author"
-                width={100}
-                height={100}
+                width={1500}
+                height={1500}
                 className="relative w-full object-contain h-auto rounded-md"
               />
             </div>
@@ -179,8 +179,8 @@ const Gallery: React.FC = () => {
               <Image
                 src="/project2.svg"
                 alt="Picture of project 3"
-                width={100}
-                height={100}
+                width={1500}
+                height={1500}
                 className="relative w-full object-contain h-auto rounded-md"
               />
             </div>
@@ -191,10 +191,10 @@ const Gallery: React.FC = () => {
                   Dental Hero
                 </p>
                 <p className="text-[16px] text-[#B1B0B0] text-justify">
-                  Dental Hero is lorem ipsum dkfalf dfjadkjf fdskalf jadslfj
-                  fdaklfj aldjfafadf fajdl fjadfj fdaslkfj af fjalsdf jaldfj
-                  aldjf lajflaj faf alal fjlasfjlasjf lakskf
-                  adfdajhfadhfiouaefha dafhadhf uad.
+                  Dental Hero is A Mobile App to accomodate 30-days oral hygiene
+                  campaign. With the features of AR instructions and
+                  gamification, users can learn how to brush their teeth
+                  properly and have fun at the same time.
                 </p>
               </div>
               <Button text="View More" onClick={() => {}} />
@@ -206,8 +206,8 @@ const Gallery: React.FC = () => {
               <Image
                 src="/project3.svg"
                 alt="Picture of project 3"
-                width={100}
-                height={100}
+                width={1500}
+                height={1500}
                 className="relative w-full object-contain h-auto rounded-md"
               />
             </div>
