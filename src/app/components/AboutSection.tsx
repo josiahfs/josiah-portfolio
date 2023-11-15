@@ -117,7 +117,7 @@ const AboutSection = () => {
           </p>
           <Button text="Download CV" onClick={() => {}} />
         </div>
-        <div className="w-[30vh] lg:w-[480px] lg:order-2">
+        <div className="hidden w-[30vh] lg:w-[480px] lg:order-2 lg:block">
           <Image
             src="/about-pic.svg"
             alt="Picture of the author"

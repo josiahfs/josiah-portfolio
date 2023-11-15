@@ -12,13 +12,15 @@
     "framer": "^2.4.1",
     "gsap": "^3.12.2",
     "icons": "^1.0.0",
+    "locomotive-scroll": "^4.1.4",
     "motion": "^10.16.4",
     "next": "14.0.1",
     "react": "^18.2.0",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.18.0",
-    "react-type-animation": "^3.2.0"
+    "react-type-animation": "^3.2.0",
+    "split-text": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

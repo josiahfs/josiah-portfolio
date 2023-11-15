@@ -1,11 +1,9 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import SplitText from "split-text";
+import { TimelineMax, Power3 } from "gsap";
+import Test from "./Test";
 
-// type NavMenuProps = {
-//   links: string[];
-// };
-
-// const NavMenu: React.FC<NavMenuProps> = ({ links }) => {
 const NavMenu: React.FC = () => {
   return (
     <>
@@ -14,7 +12,10 @@ const NavMenu: React.FC = () => {
           <div className="h-screen w-screen absolute left-0 top-0 backdrop-blur-[15px] opacity-0"></div>
           <nav className="relative z-1 text-center">
             <ul className="list-none">
-              <li className="overflow-hidden relative">
+              <li className="">
+                <Test />
+              </li>
+              {/* <li className="overflow-hidden relative">
                 <a
                   href="javascript:void(0)"
                   className="text-5xl text-[#ECECEC] uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-tight tracking-widest no-underline relative"
@@ -53,7 +54,7 @@ const NavMenu: React.FC = () => {
                     Contact
                   </span>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>
