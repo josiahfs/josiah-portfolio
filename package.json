@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "contentful": "^10.8.7",
     "framer": "^2.4.1",
     "gsap": "^3.12.2",
     "icons": "^1.0.0",
