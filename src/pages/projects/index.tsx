@@ -33,20 +33,20 @@ export default function Projects({ portfolios }) {
 
   return (
     <main className="flex min-h-screen flex-col bg-[#0B0B0B] overflow-hidden">
-      <div className="z-1 absolute top-0 left-1/2 transform -translate-x-1/2 bg-red-600 px-4 py-2 text-white">
+      <div className="z-10 absolute top-0 left-1/2 transform -translate-x-1/2 bg-red-600 px-4 py-2 text-white">
         This web is on progress, for more information contact me through email
         or linkedin
       </div>
       <header className="z-10 fixed right-0">
         <Navbar />
       </header>
-      <section className="h-screen w-screen bg-pattern-bg relative overflow-hidden pt-[120px]">
+      <section className="h-screen w-screen bg-pattern-bg relative overflow-hidden">
         {loading ? ( // Display loading state if data
           <div className="flex justify-center items-center h-full">
             <p className="text-[40px]">Loading Data...</p>
           </div>
         ) : (
-          <div className="section-content overflow-y-auto h-full">
+          <div className="overflow-y-auto h-full py-[120px]">
             <div className="grid grid-cols-4 gap-10 w-full justify-around px-[60px]">
               {portfolios.map((portfolio) => (
                 <ProjectCard key={portfolio.sys.id} portfolio={portfolio} />
@@ -55,6 +55,7 @@ export default function Projects({ portfolios }) {
           </div>
         )}
       </section>
+      <Footer />
     </main>
   );
 }
