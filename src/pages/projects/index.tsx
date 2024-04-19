@@ -7,6 +7,28 @@ import "../../app/globals.css";
 
 import { createClient } from "contentful";
 
+interface Portfolio {
+  fields: {
+    title: string;
+    heading: string;
+    description: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    slug: string;
+    tag: string[];
+    date: string;
+  };
+}
+
+interface ProjectsProps {
+  portfolios: Portfolio[];
+}
+
 export async function getStaticProps() {
   const space = process.env.CONTENTFUL_SPACE_ID || "";
   const accessToken = process.env.CONTENTFUL_ACCESS_KEY || "";
