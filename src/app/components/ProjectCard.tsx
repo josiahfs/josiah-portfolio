@@ -1,7 +1,26 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-const PortfolioCard = ({ portfolio }) => {
+interface Portfolio {
+  fields: {
+    title: string;
+    heading: string;
+    description: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    slug: string;
+    tag: string[];
+    date: string;
+  };
+}
+
+// const PortfolioCard = ({ portfolio }) => {
+const PortfolioCard: React.FC<{ portfolio: Portfolio }> = ({ portfolio }) => {
   const { title, heading, description, image, slug, tag, date } =
     portfolio.fields;
 
