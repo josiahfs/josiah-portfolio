@@ -62,7 +62,7 @@ const Gallery: React.FC = () => {
     <>
       <div className="bg-[#0B0B0B] min-h-screen text-[#ECECEC]">
         <div className="w-full h-[20vh] flex justify-center items-end">
-          <p className="text-[52px] font-bold ">My Projects</p>
+          <p className="text-[52px] font-bold ">Featured Projects</p>
         </div>
         <div className="hidden lg:flex" ref={galleryRef}>
           <div className="w-[50vw]">

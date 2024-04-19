@@ -27,7 +27,7 @@ const AboutSection = () => {
                     1000,
                     "a Mobile Developer.",
                     1000,
-                    "a Frontend Developer.",
+                    "a iOS Developer.",
                     1000,
                     "a Product Manager.",
                     1000,

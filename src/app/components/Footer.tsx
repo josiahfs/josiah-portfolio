@@ -224,7 +224,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="text-sm text-[#ECECEC] text-center hover:text-[#C19C63] transition-all duration-300 ">
-          © 2023 Josiah Farrels Suwito. All rights reserved.
+          © 2024 Josiah Farrels Suwito. All rights reserved.
         </div>
       </footer>
     </>
