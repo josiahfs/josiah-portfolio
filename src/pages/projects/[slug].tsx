@@ -13,6 +13,32 @@ const client = createClient({
   accessToken,
 });
 
+interface Portfolio {
+  sys: {
+    id: string;
+    space: any; // Define the space property type appropriately
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    environment: any; // Define the environment property type appropriately
+    revision: number;
+    contentType: any; // Define the contentType property type appropriately
+    locale: string;
+    // Add other properties if needed
+  };
+  fields: {
+    id: number;
+    title: string;
+    slug: string;
+    heading: string;
+    tag: string[];
+    date: string;
+    image: any; // Define the image property type appropriately
+    description: string;
+    // Add other properties based on your data structure
+  };
+}
+
 export const getStaticPaths = async () => {
   const res = await client.getEntries({ content_type: "portfolio" });
 
@@ -53,32 +79,6 @@ export const metadata = {
   title: "Calico",
   description: "Calico is a project management tool for developers.",
 };
-
-interface Portfolio {
-  sys: {
-    id: string;
-    space: any; // Define the space property type appropriately
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    environment: any; // Define the environment property type appropriately
-    revision: number;
-    contentType: any; // Define the contentType property type appropriately
-    locale: string;
-    // Add other properties if needed
-  };
-  fields: {
-    id: number;
-    title: string;
-    slug: string;
-    heading: string;
-    tag: string[];
-    date: string;
-    image: any; // Define the image property type appropriately
-    description: string;
-    // Add other properties based on your data structure
-  };
-}
 
 // export default function Calico({ portfolio }) {
 const ProjectDetail: React.FC<{ portfolio: Portfolio }> = ({ portfolio }) => {
