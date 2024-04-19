@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
 
   const paths = res.items.map((item) => {
     return {
-      params: { slug: item.fields.slug },
+      params: { slug: item.fields.slug ?? "" },
     };
   });
 
