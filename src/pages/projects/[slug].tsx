@@ -27,7 +27,9 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({
+  params,
+}: GetStaticPropsContext<{ slug: string }>) {
   const { items } = await client.getEntries({
     content_type: "portfolio",
     "fields.slug": params.slug,
