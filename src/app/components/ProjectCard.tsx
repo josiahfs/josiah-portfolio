@@ -2,20 +2,28 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 interface Portfolio {
+  sys: {
+    id: string;
+    space: any; // Define the space property type appropriately
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    environment: any; // Define the environment property type appropriately
+    revision: number;
+    contentType: any; // Define the contentType property type appropriately
+    locale: string;
+    // Add other properties if needed
+  };
   fields: {
+    id: number;
     title: string;
-    heading: string;
-    description: string;
-    image: {
-      fields: {
-        file: {
-          url: string;
-        };
-      };
-    };
     slug: string;
+    heading: string;
     tag: string[];
     date: string;
+    image: any; // Define the image property type appropriately
+    description: string;
+    // Add other properties based on your data structure
   };
 }
 
