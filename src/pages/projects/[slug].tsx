@@ -31,6 +31,12 @@ export const getStaticPaths = async () => {
 export async function getStaticProps({
   params,
 }: GetStaticPropsContext<{ slug: string }>) {
+  if (!params || typeof params.slug !== "string") {
+    return {
+      notFound: true,
+    };
+  }
+
   const { items } = await client.getEntries({
     content_type: "portfolio",
     "fields.slug": params.slug,
