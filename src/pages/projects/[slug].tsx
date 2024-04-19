@@ -3,6 +3,7 @@ import Footer from "../../app/components/Footer";
 import Image from "next/image";
 import "../../app/globals.css";
 import { createClient } from "contentful";
+import { GetStaticPropsContext } from "next";
 
 const space = process.env.CONTENTFUL_SPACE_ID || "";
 const accessToken = process.env.CONTENTFUL_ACCESS_KEY || "";
