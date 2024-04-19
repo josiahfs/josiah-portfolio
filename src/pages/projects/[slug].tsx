@@ -54,7 +54,26 @@ export const metadata = {
   description: "Calico is a project management tool for developers.",
 };
 
-export default function Calico({ portfolio }) {
+interface Portfolio {
+  fields: {
+    title: string;
+    heading: string;
+    description: string;
+    image: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    slug: string;
+    tag: string[];
+    date: string;
+  };
+}
+
+// export default function Calico({ portfolio }) {
+const ProjectDetail: React.FC<{ portfolio: Portfolio }> = ({ portfolio }) => {
   const { title, heading, description, image, slug } = portfolio.fields;
 
   console.log(portfolio);
@@ -63,4 +82,4 @@ export default function Calico({ portfolio }) {
       <p className="text-[48px]">This page is under construction :( </p>
     </main>
   );
-}
+};
