@@ -4,9 +4,12 @@ import Image from "next/image";
 import "../../app/globals.css";
 import { createClient } from "contentful";
 
+const space = process.env.CONTENTFUL_SPACE_ID || "";
+const accessToken = process.env.CONTENTFUL_ACCESS_KEY || "";
+
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  space,
+  accessToken,
 });
 
 export const getStaticPaths = async () => {
