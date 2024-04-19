@@ -15,10 +15,6 @@ export async function getStaticProps() {
     space,
     accessToken,
   });
-  // const client = createClient({
-  //   space: process.env.CONTENTFUL_SPACE_ID,
-  //   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  // });
 
   const res = await client.getEntries({ content_type: "portfolio" });
 
@@ -29,7 +25,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Projects({ portfolios }) {
+export default function Projects({ portfolios }: ProjectsProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
