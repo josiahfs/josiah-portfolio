@@ -4,10 +4,15 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Gallery: React.FC = () => {
+  // add router
+  const router = useRouter();
+
   const galleryRef = useRef(null);
   const rightRef = useRef(null);
   const photoRefs = useRef([useRef(null), useRef(null), useRef(null)]);
@@ -62,7 +67,7 @@ const Gallery: React.FC = () => {
     <>
       <div className="bg-[#0B0B0B] min-h-screen text-[#ECECEC]">
         <div className="w-full h-[20vh] flex justify-center items-end">
-          <p className="text-[52px] font-bold ">My Projects</p>
+          <p className="text-[52px] font-bold text-center">Featured Projects</p>
         </div>
         <div className="hidden lg:flex" ref={galleryRef}>
           <div className="w-[50vw]">
@@ -81,7 +86,12 @@ const Gallery: React.FC = () => {
                     concerns and problems for appropriate support.
                   </p>
                 </div>
-                <Button text="View More" onClick={() => {}} />
+                <Button
+                  text="View More"
+                  onClick={() => {
+                    router.push("projects/calico");
+                  }}
+                />
               </div>
             </div>
             {/* items 2 */}
@@ -99,7 +109,12 @@ const Gallery: React.FC = () => {
                     properly and have fun at the same time.
                   </p>
                 </div>
-                <Button text="View More" onClick={() => {}} />
+                <Button
+                  text="View More"
+                  onClick={() => {
+                    router.push("projects/dental-hero");
+                  }}
+                />
               </div>
             </div>
             <div className="mx-auto w-1/2">
@@ -115,7 +130,12 @@ const Gallery: React.FC = () => {
                     members to vote online and onsite.
                   </p>
                 </div>
-                <Button text="View More" onClick={() => {}} />
+                <Button
+                  text="View More"
+                  onClick={() => {
+                    router.push("projects/pemira-himakom-website");
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -141,6 +161,16 @@ const Gallery: React.FC = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        <div className="hidden lg:flex justify-center w-full h-[50vh]">
+          <div className="w-fit">
+            <Link
+              href="/projects"
+              className="text-[40px] relative font-medium after:content-[''] after:bg-[#C19C63] after:h-[3px] after:left-0 after:w-0 after:-bottom-[5px] after:rounded-xl after:absolute after:duration-300 hover:after:w-full"
+            >
+              See more projects →
+            </Link>
           </div>
         </div>
 
@@ -224,6 +254,16 @@ const Gallery: React.FC = () => {
                 </p>
               </div>
               <Button text="View More" onClick={() => {}} />
+            </div>
+          </div>
+          <div className="lg:hidden w-full h-[50vh] flex justify-center items-center">
+            <div className="w-fit">
+              <Link
+                href="/projects"
+                className="text-[28px] relative font-medium after:content-[''] after:bg-[#C19C63] after:h-[3px] after:left-0 after:w-full after:-bottom-[5px] after:rounded-xl after:absolute after:duration-300 hover:after:w-full"
+              >
+                See more projects →
+              </Link>
             </div>
           </div>
         </div>

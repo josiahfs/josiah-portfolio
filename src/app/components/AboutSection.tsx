@@ -7,7 +7,7 @@ import Button from "./Button";
 const AboutSection = () => {
   const downloadCV = () => {
     const cvLink =
-      "https://drive.google.com/file/d/1Y0IPm6k7xS49YzZraROQxavkZgu7Ba_t/view?usp=sharing";
+      "https://drive.google.com/file/d/1qSl8nLWoDTpJ9NwTvOJAXYcf9u2BDHH8/view?usp=sharing";
     window.location.href = cvLink;
   };
 
@@ -27,7 +27,7 @@ const AboutSection = () => {
                     1000,
                     "a Mobile Developer.",
                     1000,
-                    "a Frontend Developer.",
+                    "a iOS Developer.",
                     1000,
                     "a Product Manager.",
                     1000,
@@ -42,13 +42,13 @@ const AboutSection = () => {
             </p>
           </div>
           <p className="text-[#B1B0B0] text-[14px] lg:text-[16px] text-justify font-regular">
-            Hi there! My name is [Your Name] and I am a [Your Profession]. I
-            have [Number of Years] years of experience in [Your Field] and have
-            worked on projects such as [Project 1], [Project 2], and [Project
-            3]. Hi there! My name is [Your Name] and I am a [Your Profession]. I
-            have [Number of Years] years of experience in [Your Field] and have
-            worked on projects such as [Project 1], [Project 2], and [Project
-            3].
+            Hi there! My name is Josiah and I am an adaptable T-Shaped
+            Undergraduate student at Universitas Gadjah Mada, specializing in
+            Computer Science. With a strong foundation in Mobile App
+            Development, UI/UX, and Product Management, Josiah possesses a
+            diverse skill set. Josiah&apos;s proactive and inquisitive nature
+            drives him to continuously seek new learning opportunities and stay
+            up to date with the latest industry trends.
           </p>
           <Button text="Download CV" onClick={downloadCV} />
         </div>

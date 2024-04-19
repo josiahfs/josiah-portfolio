@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 5050",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 5050",
     "lint": "next lint"
   },
   "dependencies": {
+    "contentful": "^10.8.7",
     "framer": "^2.4.1",
     "gsap": "^3.12.2",
     "icons": "^1.0.0",
