@@ -46,9 +46,9 @@ const AboutSection = () => {
             Undergraduate student at Universitas Gadjah Mada, specializing in
             Computer Science. With a strong foundation in Mobile App
             Development, UI/UX, and Product Management, Josiah possesses a
-            diverse skill set. Josiah's proactive and inquisitive nature drives
-            him to continuously seek new learning opportunities and stay up to
-            date with the latest industry trends.
+            diverse skill set. Josiah&apos;s proactive and inquisitive nature
+            drives him to continuously seek new learning opportunities and stay
+            up to date with the latest industry trends.
           </p>
           <Button text="Download CV" onClick={downloadCV} />
         </div>
