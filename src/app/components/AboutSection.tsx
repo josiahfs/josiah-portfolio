@@ -7,7 +7,7 @@ import Button from "./Button";
 const AboutSection = () => {
   const downloadCV = () => {
     const cvLink =
-      "https://drive.google.com/file/d/1Y0IPm6k7xS49YzZraROQxavkZgu7Ba_t/view?usp=sharing";
+      "https://drive.google.com/file/d/1qSl8nLWoDTpJ9NwTvOJAXYcf9u2BDHH8/view?usp=sharing";
     window.location.href = cvLink;
   };
 

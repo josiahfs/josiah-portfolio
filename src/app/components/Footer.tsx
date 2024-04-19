@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
                       className="text-sm  hover:text-[#C19C63] transition-all duration-300 font-medium inline-block leading-tight text-[#B1B0B0] no-underline relative"
                     >
                       <span data-clip="Work" className="relative block">
-                        NextJS
+                        SwiftUI
                       </span>
                     </a>
                   </li>
@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
                       className="text-sm  hover:text-[#C19C63] transition-all duration-300 font-medium inline-block leading-tight  text-[#B1B0B0] no-underline relative"
                     >
                       <span data-clip="Contact" className="relative block">
-                        Leadership
+                        NextJS
                       </span>
                     </a>
                   </li>
