@@ -91,3 +91,5 @@ const ProjectDetail: React.FC<{ portfolio: Portfolio }> = ({ portfolio }) => {
     </main>
   );
 };
+
+export default ProjectDetail;

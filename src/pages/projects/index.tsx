@@ -37,9 +37,31 @@ interface ProjectsProps {
   portfolios: Portfolio[];
 }
 
+// export async function getStaticProps() {
+//   const space = process.env.CONTENTFUL_SPACE_ID || "";
+//   const accessToken = process.env.CONTENTFUL_ACCESS_KEY || "";
+
+//   const client = createClient({
+//     space,
+//     accessToken,
+//   });
+
+//   const res = await client.getEntries({ content_type: "portfolio" });
+
+//   return {
+//     props: {
+//       portfolios: res.items,
+//     },
+//   };
+// }
+
 export async function getStaticProps() {
   const space = process.env.CONTENTFUL_SPACE_ID || "";
   const accessToken = process.env.CONTENTFUL_ACCESS_KEY || "";
+
+  if (!space || !accessToken) {
+    throw new Error("Contentful space ID or access token is missing.");
+  }
 
   const client = createClient({
     space,
