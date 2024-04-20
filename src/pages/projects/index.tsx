@@ -84,7 +84,7 @@ export default function Projects({ portfolios }: ProjectsProps) {
           </div>
         ) : (
           <div className="overflow-y-auto h-full py-[120px]">
-            <div className="flex flex-col md:grid md:grid-cols-4 gap-10 w-full justify-around px-[60px]">
+            <div className="flex flex-col md:grid md:grid-cols-4 gap-10 w-full justify-around md:px-[60px]">
               {portfolios.map((portfolio) => (
                 <ProjectCard key={portfolio.sys.id} portfolio={portfolio} />
               ))}

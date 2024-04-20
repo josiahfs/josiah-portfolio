@@ -13,7 +13,7 @@ const NavMenu: React.FC = () => {
               <li className="overflow-hidden relative">
                 <Link
                   href="/"
-                  className="text-5xl text-[#ECECEC] uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-tight tracking-widest no-underline relative"
+                  className="text-4xl md:text-5xl md:leading-snug text-[#ECECEC] uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-normal tracking-widest no-underline relative"
                 >
                   <span data-clip="Home" className="block relative ">
                     Home
@@ -23,7 +23,7 @@ const NavMenu: React.FC = () => {
               <li className="overflow-hidden">
                 <Link
                   href="/about"
-                  className="text-5xl uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-tight tracking-widest text-transparent -webkit-text-stroke-2 text-white no-underline relative"
+                  className="text-4xl md:text-5xl md:leading-snug uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-normal tracking-widest text-transparent -webkit-text-stroke-2 text-white no-underline relative"
                 >
                   <span data-clip="About" className="relative block">
                     About
@@ -33,7 +33,7 @@ const NavMenu: React.FC = () => {
               <li className="overflow-hidden">
                 <Link
                   href="/projects"
-                  className="text-5xl uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-tight tracking-widest text-transparent -webkit-text-stroke-2 text-white no-underline relative"
+                  className="text-4xl md:text-5xl md:leading-snug  uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-normal tracking-widest text-transparent -webkit-text-stroke-2 text-white no-underline relative"
                 >
                   <span data-clip="Work" className="relative block">
                     Projects
@@ -43,7 +43,7 @@ const NavMenu: React.FC = () => {
               <li className="overflow-hidden">
                 <a
                   href="javascript:void(0)"
-                  className="text-5xl uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-tight tracking-widest text-transparent -webkit-text-stroke-2 text-white no-underline relative"
+                  className="text-4xl md:text-5xl md:leading-snug uppercase hover:text-[#C19C63] hover:text-6xl transition-all duration-300 font-bold inline-block leading-normal tracking-widest text-transparent -webkit-text-stroke-2 text-white no-underline relative"
                 >
                   <span data-clip="Contact" className="relative block">
                     Contact
