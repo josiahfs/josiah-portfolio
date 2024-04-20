@@ -70,10 +70,6 @@ export default function Projects({ portfolios }: ProjectsProps) {
 
   return (
     <main className="flex min-h-screen flex-col bg-[#0B0B0B] overflow-hidden">
-      {/* <div className="z-10 absolute top-0 left-1/2 transform -translate-x-1/2 bg-red-600 px-4 py-2 text-white">
-        This web is on progress, for more information contact me through email
-        or linkedin
-      </div> */}
       <header className="z-10 fixed right-0">
         <Navbar />
       </header>
@@ -84,7 +80,7 @@ export default function Projects({ portfolios }: ProjectsProps) {
           </div>
         ) : (
           <div className="overflow-y-auto h-full py-[120px]">
-            <div className="flex flex-col md:grid md:grid-cols-4 gap-10 w-full justify-around md:px-[60px]">
+            <div className="flex flex-col px-[32px] md:grid md:grid-cols-4 gap-10 w-full justify-around md:px-[60px]">
               {portfolios.map((portfolio) => (
                 <ProjectCard key={portfolio.sys.id} portfolio={portfolio} />
               ))}

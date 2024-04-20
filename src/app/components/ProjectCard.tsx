@@ -40,7 +40,7 @@ const PortfolioCard: React.FC<{ portfolio: Portfolio }> = ({ portfolio }) => {
 
   return (
     <div
-      className="group w-fill h-fill backdrop-blur-sm bg-[#D4D0D0]/20 rounded-xl outline-white outline-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
+      className="group w-fill h-fill backdrop-blur-sm hover:backdrop-blur-none bg-[#D4D0D0]/20 rounded-xl outline-white outline-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
       onClick={handleClick}
     >
       <div className="opacity-80">

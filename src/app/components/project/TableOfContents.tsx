@@ -1,66 +1,110 @@
-import React from "react";
+// import React, { useState, useEffect } from "react";
+// import Image from "next/image";
 
-type Heading = {
-  level: number;
-  content: string;
-};
+// type Heading = {
+//   level: number;
+//   content: string;
+// };
 
-type TableOfContentsProps = {
-  richText: any; // Assuming richText is the Contentful rich text object
-};
+// type RichTextNode = {
+//   nodeType: string;
+//   content: {
+//     value: string;
+//   }[];
+// };
 
-const TableOfContents: React.FC<TableOfContentsProps> = ({ richText }) => {
-  const parseRichTextForTableOfContents = (richText) => {
-    if (!richText || !richText.content) {
-      return [];
-    }
+// type RichTextContent = {
+//   content: RichTextNode[];
+// };
 
-    const toc = []; // Table of contents data structure
-    const nodes = richText.content; // Extract content nodes from rich text
+// type TableOfContentsProps = {
+//   richText: RichTextContent; // Pass the rich text content as prop
+// };
 
-    // Traverse through the nodes to identify headings
-    nodes.forEach((node) => {
-      if (node.nodeType.startsWith("heading")) {
-        // Extract heading level (e.g., "heading-1", "heading-2")
-        const level = parseInt(node.nodeType.split("-")[1]);
+// const TableOfContents: React.FC<TableOfContentsProps> = ({ richText }) => {
+//   const [headings, setHeadings] = useState<Heading[]>([]);
 
-        // Extract heading content
-        const content = node.content[0].value;
+//   useEffect(() => {
+//     const parseRichTextForTableOfContents = (richText: RichTextContent) => {
+//       const toc: Heading[] = [];
+//       const nodes = richText.content;
 
-        // Add heading to table of contents
-        toc.push({ level, content });
-      }
-    });
+//       if (richText && richText.content) {
+//         richText.content.forEach((node) => {
+//           if (node.nodeType.startsWith("heading")) {
+//             const level = parseInt(node.nodeType.split("-")[1]);
+//             const content = node.content[0].value;
+//             toc.push({ level, content });
+//           }
+//         });
+//       }
 
-    return toc;
-  };
+//       return toc;
+//     };
 
-  const tableOfContents = parseRichTextForTableOfContents(richText);
+//     setHeadings(parseRichTextForTableOfContents(richText));
+//   }, [richText]);
 
-  if (!tableOfContents || tableOfContents.length === 0) {
-    return null;
-  }
+//   const [activeHeading, setActiveHeading] = useState<number | null>(null);
 
-  return (
-    <div className="flex flex-col mt-4">
-      <p className="text-xl font-semibold">Table of Contents</p>
-      <ul>
-        {tableOfContents.map((heading, index) => (
-          <li
-            key={index}
-            style={{ marginLeft: `${(heading.level - 2) * 24}px` }}
-          >
-            <a
-              href={`#heading-${index}`}
-              className="text-[#B1B0B0] hover:text-[#C19C63] transition-colors duration-300 ease-in-out hover:font-semibold"
-            >
-              {heading.content}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const scrollPosition = window.scrollY;
+//       let activeIndex = null;
+//       headings.forEach((heading, index) => {
+//         const section = document.getElementById(`section-${index}`);
+//         if (section && section.offsetTop <= scrollPosition + 200) {
+//           activeIndex = index;
+//         }
+//       });
+//       setActiveHeading(activeIndex);
+//     };
 
-export default TableOfContents;
+//     window.addEventListener("scroll", handleScroll);
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, [headings]);
+
+//   const handleClick = (index: number) => {
+//     const section = document.getElementById(`section-${index}`);
+//     if (section) {
+//       window.scrollTo({
+//         top: section.offsetTop - 100,
+//         behavior: "smooth",
+//       });
+//     }
+//   };
+
+//   return (
+//     <div className="flex flex-col mt-4">
+//       <p className="text-xl font-semibold">Table of Contents</p>
+//       <ul>
+//         {headings.map((heading, index) => (
+//           <li
+//             key={index}
+//             className={activeHeading === index ? "active" : ""}
+//             onClick={() => handleClick(index)}
+//             style={{ marginLeft: `${(heading.level - 2) * 24}px` }}
+//           >
+//             <span className="text-[#B1B0B0] hover:text-[#C19C63] transition-colors duration-300 ease-in-out hover:font-semibold">
+//               {heading.content}
+//             </span>
+//           </li>
+//         ))}
+//       </ul>
+
+//       <style jsx>{`
+//         ul {
+//           list-style-type: none;
+//           padding: 0;
+//         }
+//         li.active {
+//           font-weight: bold;
+//         }
+//       `}</style>
+//     </div>
+//   );
+// };
+
+// export default TableOfContents;
