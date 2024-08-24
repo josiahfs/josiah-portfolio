@@ -7,7 +7,7 @@ import "../../app/globals.css";
 
 import { createClient } from "contentful";
 
-interface Profile {
+interface Portfolio {
   sys: {
     id: string;
     space: any; // Define the space property type appropriately
